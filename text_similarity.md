@@ -98,11 +98,11 @@ all_doc_list
 
 
 
-    [['打球', '腿', '羊尾', '早晚', '不练', '得'],
-     ['完球', '去', '吃', '打', '小尾羊'],
-     ['写', '作业', '打球', '之后'],
-     ['再', '打球', '加班', '先'],
-     ['就', '一点点', '打球', '会', '早晚', '进步']]
+    [['得', '早晚', '羊尾', '不练', '腿', '打球'],
+     ['吃', '完球', '打', '去', '小尾羊'],
+     ['之后', '打球', '作业', '写'],
+     ['先', '打球', '再', '加班'],
+     ['进步', '早晚', '就', '一点点', '会', '打球']]
 
 
 
@@ -143,7 +143,7 @@ dictionary.keys()
 
 
 
-    [13, 17, 12, 2, 19, 5, 18, 16, 4, 20, 15, 6, 7, 0, 9, 8, 3, 1, 11, 10, 14]
+    [7, 20, 3, 19, 16, 11, 6, 14, 10, 17, 4, 15, 0, 8, 5, 1, 2, 9, 12, 13, 18]
 
 
 
@@ -479,4 +479,15 @@ index_value = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features=le
 sim = index_value[tfidf[doc_test_vec]]
 
 print(sorted(enumerate(sim), key=lambda item: -item[1]))
+```
+
+运行结果：
+
+```
+(py3) ➜  doc_similarity python mydoc_sim.py
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 2.526 seconds.
+Prefix dict has been built succesfully.
+[(2, 0.9530888), (1, 0.070823014), (0, 0.010986276)]
 ```
