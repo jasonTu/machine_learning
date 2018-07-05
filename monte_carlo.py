@@ -1,5 +1,18 @@
 '''
 random.random is more faster than randint
+
+In [31]: timeit.timeit('random.random()', setup='import random', number=1000000)
+Out[31]: 0.15195741500019722
+
+In [32]: timeit.timeit('random.randint(0, 10)', setup='import random', number=1000000)
+Out[32]: 2.6519588080000176
+
+In [33]: timeit.timeit('random.randint(1, 2)', setup='import random', number=1000000)
+Out[33]: 2.568905852000171
+
+In [34]: timeit.timeit('random.randint(0, 100)', setup='import random', number=1000000)
+Out[34]: 2.4685180970000147
+
 '''
 import sys
 from math import sqrt
