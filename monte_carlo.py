@@ -1,3 +1,6 @@
+'''
+random.random is more faster than randint
+'''
 import sys
 from math import sqrt
 from random import randint, random
